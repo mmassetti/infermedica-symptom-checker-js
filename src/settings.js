@@ -1,3 +1,5 @@
+/* eslint-disable quotes */
+/* eslint-disable comma-dangle */
 /**
  * Created by Tomasz Gabrysiak @ Infermedica on 06/03/2017.
  *
@@ -7,7 +9,7 @@
 
 const settings = {
   'app-id': '',
-  'app-key': ''
+  'app-key': '',
 };
 
 export default settings;

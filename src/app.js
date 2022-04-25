@@ -29,58 +29,58 @@ export default class DemoApp extends App {
     this.views = [
       {
         context: {
-          api: this.api
+          api: this.api,
         },
-        view: 'welcome'
+        view: 'welcome',
       },
       {
         context: {
-          patient: this.patient
+          patient: this.patient,
         },
-        view: 'basic'
+        view: 'basic',
       },
       {
         context: {
           api: this.api,
-          patient: this.patient
+          patient: this.patient,
         },
-        view: 'nlp'
+        view: 'nlp',
       },
       {
         context: {
           api: this.api,
-          patient: this.patient
+          patient: this.patient,
         },
-        view: 'common-risks'
+        view: 'common-risks',
       },
       {
         context: {
           api: this.api,
-          patient: this.patient
+          patient: this.patient,
         },
-        view: 'suggest'
+        view: 'suggest',
       },
       {
         context: {
           api: this.api,
-          patient: this.patient
+          patient: this.patient,
         },
-        view: 'geo-risks'
+        view: 'geo-risks',
       },
       {
         context: {
           api: this.api,
-          patient: this.patient
+          patient: this.patient,
         },
-        view: 'question'
+        view: 'question',
       },
       {
         context: {
           api: this.api,
-          patient: this.patient
+          patient: this.patient,
         },
-        view: 'summary'
-      }
+        view: 'summary',
+      },
     ];
   }
 
@@ -90,7 +90,9 @@ export default class DemoApp extends App {
   }
 
   startInterview() {
-    this.controller = new DemoController(this.el.querySelector('#step-container'));
+    this.controller = new DemoController(
+      this.el.querySelector('#step-container')
+    );
 
     const currentView = this.views[this.currentStep];
     this.controller.setView(currentView.view, currentView.context);
